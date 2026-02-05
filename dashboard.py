@@ -69,7 +69,7 @@ st.markdown(
 }
 
 .block-container{
-  padding: 2rem 8rem 5rem !important;
+  padding: 2rem 6rem 5rem !important;
 }
 
 :root{
