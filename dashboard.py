@@ -274,6 +274,11 @@ div[data-testid="stVerticalBlockBorderWrapper"]{
   word-break: keep-all;
 }
 
+/* 헤더 영역 버튼 위치 조정 - Popover 버튼을 아래로 내림 */
+.header-button-wrapper {
+  margin-top: 28px;
+}
+
 </style>
 """,
     unsafe_allow_html=True,
@@ -292,41 +297,135 @@ HEADERS = {
 
 @st.cache_data(ttl=60)
 def fetch_headlines(url: str, limit: int = 5):
+    """네이버 뉴스 크롤링 - 안정성 개선 버전"""
     try:
-        r = requests.get(url, headers=HEADERS, timeout=10)
-        r.raise_for_status()
+        # 1. 재시도 로직 추가
+        max_retries = 3
+        r = None
+        for attempt in range(max_retries):
+            try:
+                r = requests.get(url, headers=HEADERS, timeout=15)
+                r.raise_for_status()
+                break
+            except requests.exceptions.Timeout:
+                if attempt == max_retries - 1:
+                    raise
+                continue
+            except requests.exceptions.RequestException:
+                if attempt == max_retries - 1:
+                    raise
+                continue
+        
+        if r is None:
+            raise Exception("Failed to fetch after retries")
+            
         soup = BeautifulSoup(r.text, "html.parser")
 
         items = []
-        for li in soup.select("li.sa_item"):
-            title_node = li.select_one("a.sa_text_title strong.sa_text_strong")
-            link_node = li.select_one("a.sa_text_title")
-            thumb_img = li.select_one("a.sa_thumb_link img")
+        
+        # 2. 여러 CSS 셀렉터 시도
+        selectors = [
+            "li.sa_item",
+            "div.sa_item", 
+            "div.list_body li",
+            "ul.type01 li",
+            "div.list_body div.sa_item"
+        ]
+        
+        for selector in selectors:
+            elements = soup.select(selector)
+            if elements:
+                for li in elements:
+                    # 제목 추출 시도 (여러 패턴)
+                    title_node = (
+                        li.select_one("a.sa_text_title strong.sa_text_strong") or
+                        li.select_one("strong.sa_text_strong") or
+                        li.select_one("strong") or
+                        li.select_one("a.sa_text_title") or
+                        li.select_one("a")
+                    )
+                    
+                    # 링크 추출 시도
+                    link_node = (
+                        li.select_one("a.sa_text_title") or
+                        li.select_one("a[href]")
+                    )
+                    
+                    if not title_node or not link_node:
+                        continue
 
-            if not title_node or not link_node:
-                continue
+                    title = title_node.get_text(strip=True)
+                    if not title or len(title) < 5:  # 너무 짧은 제목 제외
+                        continue
 
-            title = title_node.get_text(strip=True)
+                    href = (link_node.get("href") or "").strip()
+                    if href.startswith("/"):
+                        href = "https://news.naver.com" + href
+                    
+                    if not href.startswith("http"):
+                        continue
 
-            href = (link_node.get("href") or "").strip()
-            if href.startswith("/"):
-                href = "https://news.naver.com" + href
+                    # 이미지 추출
+                    thumb_img = (
+                        li.select_one("a.sa_thumb_link img") or
+                        li.select_one("img")
+                    )
+                    img_url = ""
+                    if thumb_img:
+                        img_url = (
+                            thumb_img.get("data-src") or 
+                            thumb_img.get("src") or ""
+                        ).strip()
 
-            img_url = ""
-            if thumb_img:
-                img_url = (thumb_img.get("src") or thumb_img.get("data-src") or "").strip()
-
-            items.append({"title": title, "url": href, "img": img_url})
-            if len(items) >= limit:
-                break
-
+                    items.append({"title": title, "url": href, "img": img_url})
+                    
+                    if len(items) >= limit:
+                        break
+                
+                if items:  # 아이템을 찾았으면 중단
+                    break
+        
+        # 3. 결과가 없으면 기본 뉴스 반환
+        if not items:
+            items = [
+                {
+                    "title": "네이버 경제 뉴스 바로가기",
+                    "url": "https://news.naver.com/breakingnews/section/101/262",
+                    "img": ""
+                },
+                {
+                    "title": "무역협회 무역뉴스",
+                    "url": "https://www.kita.net/cmmrcInfo/cmmrcNews/cmrcNewsList.do",
+                    "img": ""
+                },
+                {
+                    "title": "관세청 공지사항",
+                    "url": "https://www.customs.go.kr/kcs/ad/sb/selectBdBrdList.do",
+                    "img": ""
+                }
+            ]
+        
         return items
-    except requests.exceptions.HTTPError as e:
-        # HTTP 에러 발생 시 빈 리스트 반환
-        return []
+        
     except Exception as e:
-        # 기타 모든 에러 처리
-        return []
+        # 4. 에러 시 기본 뉴스 반환
+        return [
+            {
+                "title": "📰 네이버 경제뉴스",
+                "url": "https://news.naver.com/breakingnews/section/101/262",
+                "img": ""
+            },
+            {
+                "title": "📊 무역협회 뉴스",
+                "url": "https://www.kita.net/cmmrcInfo/cmmrcNews/cmrcNewsList.do",
+                "img": ""
+            },
+            {
+                "title": "🏛️ 관세청 공지",
+                "url": "https://www.customs.go.kr/kcs/ad/sb/selectBdBrdList.do",
+                "img": ""
+            }
+        ]
 
 
 def esc(s: str) -> str:
@@ -957,6 +1056,8 @@ with header_left:
     )
 
 with header_right:
+    # 버튼을 아래로 내리기 위한 wrapper
+    st.markdown('<div class="header-button-wrapper">', unsafe_allow_html=True)
     b1, b2 = st.columns(2)
     with b1:
         render_exchange_widget(
@@ -969,6 +1070,7 @@ with header_right:
             title="**💬 챗봇**",
             popover_width="stretch",
         )
+    st.markdown('</div>', unsafe_allow_html=True)
 
 if "nav" not in st.session_state:
     st.session_state.nav = "Home"
@@ -1090,14 +1192,10 @@ if selected == "Settings":
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# 뉴스 티커 부분 - 에러 처리 추가
+# 뉴스 티커 부분 - 안정화된 버전
 with st.container():
     items = fetch_headlines(NAVER_URL, 5)
-    if items and len(items) > 0:
-        render_naver_ticker(items)
-    else:
-        # 뉴스를 불러오지 못한 경우 대체 콘텐츠
-        st.info("📰 **실시간 무역 뉴스**: [네이버 경제뉴스 바로가기](https://news.naver.com/breakingnews/section/101/262)")
+    render_naver_ticker(items)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
