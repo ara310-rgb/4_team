@@ -69,7 +69,7 @@ st.markdown(
 }
 
 .block-container{
-  padding: 2rem 8rem 5rem !important;
+  padding: 5rem 8rem 5rem !important;  # 상단을 2rem → 5rem으로 증가
 }
 
 :root{
