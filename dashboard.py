@@ -530,7 +530,7 @@ def get_openai_response(user_text: str, system_message: str) -> str:
     except Exception as e:
         return f"AI 호출 오류: {e}"
 
-
+st.space("small")
 def render_chat_widget(
     get_openai_response_fn,
     title: str = "💬 AI 챗봇",
