@@ -69,10 +69,7 @@ st.markdown(
 }
 
 .block-container{
-  padding-top: 8rem !important;  /* 이렇게 변경 */
-  padding-left: 8rem !important;
-  padding-right: 8rem !important;
-  padding-bottom: 5rem !important;
+  padding: 2rem 8rem 5rem !important;
 }
 
 :root{
@@ -950,7 +947,6 @@ def render_us_page():
 init_chat_state()
 init_exchange_state()
 
-st.markdown("<br><br>", unsafe_allow_html=True)
 header_left, header_right = st.columns([7, 3])
 
 with header_left:
