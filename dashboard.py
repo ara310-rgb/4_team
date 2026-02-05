@@ -1123,6 +1123,7 @@ with c3:
     st.metric("진행률", f"{int(progress3*100)}%")
 
 with c4:
+    st.space("medium")
     st.markdown(
         """
         <div class="quick-stack">
