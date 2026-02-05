@@ -63,25 +63,13 @@ st.markdown(
     """
 <style>
 
-/* 헤더 영역 조정 */
-.main > div:first-child {
-  padding-top: 1rem;
-}
-
-/* Popover 버튼 스타일 개선 */
-[data-testid="stPopover"] button {
-  min-width: 100px !important;
-  white-space: nowrap !important;
-  padding: 8px 16px !important;
-}
-
 /* Streamlit 기본 멀티페이지 네비게이션 제거 */
 [data-testid="stSidebarNav"] {
     display: none;
 }
 
 .block-container{
-  padding: 3rem 8rem 5rem !important;  # 상단 2rem → 3rem으로 증가
+  padding: 2rem 8rem 5rem !important;
 }
 
 :root{
@@ -959,7 +947,7 @@ def render_us_page():
 init_chat_state()
 init_exchange_state()
 
-header_left, header_right = st.columns([6, 4])
+header_left, header_right = st.columns([7, 3])
 
 with header_left:
     st.title("세연 글로벌 커넥트")
