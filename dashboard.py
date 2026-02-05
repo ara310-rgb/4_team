@@ -274,15 +274,6 @@ div[data-testid="stVerticalBlockBorderWrapper"]{
   word-break: keep-all;
 }
 
-/* 헤더 영역 정렬 수정 */
-.header-right-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 1.5rem;
-  gap: 0.5rem;
-}
-
 </style>
 """,
     unsafe_allow_html=True,
@@ -966,8 +957,7 @@ with header_left:
     )
 
 with header_right:
-    st.markdown('<div style="height: 20px;"></div>', unsafe_allow_html=True)
-    b1, b2 = st.columns([1, 1], gap="small")
+    b1, b2 = st.columns(2)
     with b1:
         render_exchange_widget(
             title="**💵 환율**",
@@ -1132,7 +1122,7 @@ with c3:
     st.metric("진행률", f"{int(progress3*100)}%")
 
 with c4:
-    st.markdown('<div style="height: 8px;"></div>', unsafe_allow_html=True)
+    st.space("medium")
     st.markdown(
         """
         <div class="quick-stack">
