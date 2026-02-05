@@ -63,16 +63,6 @@ st.markdown(
     """
 <style>
 
-/* 제목 영역에 상단 여백 추가 */
-.main .block-container > div:first-child {
-  margin-top: 80px !important;
-}
-
-/* 또는 h1 태그에 직접 여백 */
-.main h1:first-of-type {
-  margin-top: 80px !important;
-}
-
 /* Streamlit 기본 멀티페이지 네비게이션 제거 */
 [data-testid="stSidebarNav"] {
     display: none;
@@ -957,6 +947,7 @@ def render_us_page():
 init_chat_state()
 init_exchange_state()
 
+st.markdown("<br><br>", unsafe_allow_html=True)
 header_left, header_right = st.columns([7, 3])
 
 with header_left:
