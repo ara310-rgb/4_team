@@ -1,0 +1,550 @@
+{
+  "amazon.com_뿡": [
+    {
+      "제품명": "Premium 뿡 Product Set - Professional Grade",
+      "브랜드": "TopBrand",
+      "가격": 29.99,
+      "별점": 4.5,
+      "리뷰수": 15678,
+      "asin": "B0CDEF1234",
+      "링크": "https://amazon.com/dp/B0CDEF1234"
+    },
+    {
+      "제품명": "Essential 뿡 Collection - Best Seller",
+      "브랜드": "EssentialCo",
+      "가격": 24.99,
+      "별점": 4.4,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1235",
+      "링크": "https://amazon.com/dp/B0CDEF1235"
+    },
+    {
+      "제품명": "Deluxe 뿡 Bundle - Value Pack",
+      "브랜드": "DeluxeBrand",
+      "가격": 34.99,
+      "별점": 4.3,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1236",
+      "링크": "https://amazon.com/dp/B0CDEF1236"
+    },
+    {
+      "제품명": "Professional 뿡 Kit - Complete Set",
+      "브랜드": "ProLine",
+      "가격": 39.99,
+      "별점": 4.6,
+      "리뷰수": 34567,
+      "asin": "B0CDEF1237",
+      "링크": "https://amazon.com/dp/B0CDEF1237"
+    },
+    {
+      "제품명": "Natural 뿡 Organic Collection",
+      "브랜드": "NaturalCo",
+      "가격": 27.5,
+      "별점": 4.2,
+      "리뷰수": 8901,
+      "asin": "B0CDEF1238",
+      "링크": "https://amazon.com/dp/B0CDEF1238"
+    },
+    {
+      "제품명": "Budget 뿡 Starter Pack",
+      "브랜드": "ValueBrand",
+      "가격": 15.99,
+      "별점": 4.1,
+      "리뷰수": 45678,
+      "asin": "B0CDEF1239",
+      "링크": "https://amazon.com/dp/B0CDEF1239"
+    },
+    {
+      "제품명": "Luxury 뿡 Premium Edition",
+      "브랜드": "LuxuryLine",
+      "가격": 55.0,
+      "별점": 4.7,
+      "리뷰수": 7890,
+      "asin": "B0CDEF1240",
+      "링크": "https://amazon.com/dp/B0CDEF1240"
+    },
+    {
+      "제품명": "Everyday 뿡 Daily Use Set",
+      "브랜드": "DailyBrand",
+      "가격": 19.99,
+      "별점": 4.3,
+      "리뷰수": 56789,
+      "asin": "B0CDEF1241",
+      "링크": "https://amazon.com/dp/B0CDEF1241"
+    },
+    {
+      "제품명": "Advanced 뿡 Formula Plus",
+      "브랜드": "AdvancedCo",
+      "가격": 32.0,
+      "별점": 4.4,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1242",
+      "링크": "https://amazon.com/dp/B0CDEF1242"
+    },
+    {
+      "제품명": "Classic 뿡 Traditional Set",
+      "브랜드": "ClassicBrand",
+      "가격": 22.5,
+      "별점": 4.2,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1243",
+      "링크": "https://amazon.com/dp/B0CDEF1243"
+    },
+    {
+      "제품명": "Modern 뿡 Innovation Series",
+      "브랜드": "ModernCo",
+      "가격": 42.0,
+      "별점": 4.5,
+      "리뷰수": 34567,
+      "asin": "B0CDEF1244",
+      "링크": "https://amazon.com/dp/B0CDEF1244"
+    },
+    {
+      "제품명": "Eco-Friendly 뿡 Green Edition",
+      "브랜드": "EcoBrand",
+      "가격": 28.99,
+      "별점": 4.4,
+      "리뷰수": 8901,
+      "asin": "B0CDEF1245",
+      "링크": "https://amazon.com/dp/B0CDEF1245"
+    },
+    {
+      "제품명": "Travel Size 뿡 Mini Set",
+      "브랜드": "TravelCo",
+      "가격": 14.99,
+      "별점": 4.1,
+      "리뷰수": 45678,
+      "asin": "B0CDEF1246",
+      "링크": "https://amazon.com/dp/B0CDEF1246"
+    },
+    {
+      "제품명": "Family 뿡 Mega Pack",
+      "브랜드": "FamilyBrand",
+      "가격": 48.0,
+      "별점": 4.3,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1247",
+      "링크": "https://amazon.com/dp/B0CDEF1247"
+    },
+    {
+      "제품명": "Sensitive 뿡 Gentle Care",
+      "브랜드": "GentleCo",
+      "가격": 26.5,
+      "별점": 4.5,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1248",
+      "링크": "https://amazon.com/dp/B0CDEF1248"
+    }
+  ],
+  "amazon.com_hand warmer": [
+    {
+      "제품명": "Premium Hand Warmer Product Set - Professional Grade",
+      "브랜드": "TopBrand",
+      "가격": 29.99,
+      "별점": 4.5,
+      "리뷰수": 15678,
+      "asin": "B0CDEF1234",
+      "링크": "https://amazon.com/dp/B0CDEF1234"
+    },
+    {
+      "제품명": "Essential Hand Warmer Collection - Best Seller",
+      "브랜드": "EssentialCo",
+      "가격": 24.99,
+      "별점": 4.4,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1235",
+      "링크": "https://amazon.com/dp/B0CDEF1235"
+    },
+    {
+      "제품명": "Deluxe Hand Warmer Bundle - Value Pack",
+      "브랜드": "DeluxeBrand",
+      "가격": 34.99,
+      "별점": 4.3,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1236",
+      "링크": "https://amazon.com/dp/B0CDEF1236"
+    },
+    {
+      "제품명": "Professional Hand Warmer Kit - Complete Set",
+      "브랜드": "ProLine",
+      "가격": 39.99,
+      "별점": 4.6,
+      "리뷰수": 34567,
+      "asin": "B0CDEF1237",
+      "링크": "https://amazon.com/dp/B0CDEF1237"
+    },
+    {
+      "제품명": "Natural Hand Warmer Organic Collection",
+      "브랜드": "NaturalCo",
+      "가격": 27.5,
+      "별점": 4.2,
+      "리뷰수": 8901,
+      "asin": "B0CDEF1238",
+      "링크": "https://amazon.com/dp/B0CDEF1238"
+    },
+    {
+      "제품명": "Budget Hand Warmer Starter Pack",
+      "브랜드": "ValueBrand",
+      "가격": 15.99,
+      "별점": 4.1,
+      "리뷰수": 45678,
+      "asin": "B0CDEF1239",
+      "링크": "https://amazon.com/dp/B0CDEF1239"
+    },
+    {
+      "제품명": "Luxury Hand Warmer Premium Edition",
+      "브랜드": "LuxuryLine",
+      "가격": 55.0,
+      "별점": 4.7,
+      "리뷰수": 7890,
+      "asin": "B0CDEF1240",
+      "링크": "https://amazon.com/dp/B0CDEF1240"
+    },
+    {
+      "제품명": "Everyday Hand Warmer Daily Use Set",
+      "브랜드": "DailyBrand",
+      "가격": 19.99,
+      "별점": 4.3,
+      "리뷰수": 56789,
+      "asin": "B0CDEF1241",
+      "링크": "https://amazon.com/dp/B0CDEF1241"
+    },
+    {
+      "제품명": "Advanced Hand Warmer Formula Plus",
+      "브랜드": "AdvancedCo",
+      "가격": 32.0,
+      "별점": 4.4,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1242",
+      "링크": "https://amazon.com/dp/B0CDEF1242"
+    },
+    {
+      "제품명": "Classic Hand Warmer Traditional Set",
+      "브랜드": "ClassicBrand",
+      "가격": 22.5,
+      "별점": 4.2,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1243",
+      "링크": "https://amazon.com/dp/B0CDEF1243"
+    },
+    {
+      "제품명": "Modern Hand Warmer Innovation Series",
+      "브랜드": "ModernCo",
+      "가격": 42.0,
+      "별점": 4.5,
+      "리뷰수": 34567,
+      "asin": "B0CDEF1244",
+      "링크": "https://amazon.com/dp/B0CDEF1244"
+    },
+    {
+      "제품명": "Eco-Friendly Hand Warmer Green Edition",
+      "브랜드": "EcoBrand",
+      "가격": 28.99,
+      "별점": 4.4,
+      "리뷰수": 8901,
+      "asin": "B0CDEF1245",
+      "링크": "https://amazon.com/dp/B0CDEF1245"
+    },
+    {
+      "제품명": "Travel Size Hand Warmer Mini Set",
+      "브랜드": "TravelCo",
+      "가격": 14.99,
+      "별점": 4.1,
+      "리뷰수": 45678,
+      "asin": "B0CDEF1246",
+      "링크": "https://amazon.com/dp/B0CDEF1246"
+    },
+    {
+      "제품명": "Family Hand Warmer Mega Pack",
+      "브랜드": "FamilyBrand",
+      "가격": 48.0,
+      "별점": 4.3,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1247",
+      "링크": "https://amazon.com/dp/B0CDEF1247"
+    },
+    {
+      "제품명": "Sensitive Hand Warmer Gentle Care",
+      "브랜드": "GentleCo",
+      "가격": 26.5,
+      "별점": 4.5,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1248",
+      "링크": "https://amazon.com/dp/B0CDEF1248"
+    }
+  ],
+  "amazon.com_perfume": [
+    {
+      "제품명": "Premium Perfume Product Set - Professional Grade",
+      "브랜드": "TopBrand",
+      "가격": 29.99,
+      "별점": 4.5,
+      "리뷰수": 15678,
+      "asin": "B0CDEF1234",
+      "링크": "https://amazon.com/dp/B0CDEF1234"
+    },
+    {
+      "제품명": "Essential Perfume Collection - Best Seller",
+      "브랜드": "EssentialCo",
+      "가격": 24.99,
+      "별점": 4.4,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1235",
+      "링크": "https://amazon.com/dp/B0CDEF1235"
+    },
+    {
+      "제품명": "Deluxe Perfume Bundle - Value Pack",
+      "브랜드": "DeluxeBrand",
+      "가격": 34.99,
+      "별점": 4.3,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1236",
+      "링크": "https://amazon.com/dp/B0CDEF1236"
+    },
+    {
+      "제품명": "Professional Perfume Kit - Complete Set",
+      "브랜드": "ProLine",
+      "가격": 39.99,
+      "별점": 4.6,
+      "리뷰수": 34567,
+      "asin": "B0CDEF1237",
+      "링크": "https://amazon.com/dp/B0CDEF1237"
+    },
+    {
+      "제품명": "Natural Perfume Organic Collection",
+      "브랜드": "NaturalCo",
+      "가격": 27.5,
+      "별점": 4.2,
+      "리뷰수": 8901,
+      "asin": "B0CDEF1238",
+      "링크": "https://amazon.com/dp/B0CDEF1238"
+    },
+    {
+      "제품명": "Budget Perfume Starter Pack",
+      "브랜드": "ValueBrand",
+      "가격": 15.99,
+      "별점": 4.1,
+      "리뷰수": 45678,
+      "asin": "B0CDEF1239",
+      "링크": "https://amazon.com/dp/B0CDEF1239"
+    },
+    {
+      "제품명": "Luxury Perfume Premium Edition",
+      "브랜드": "LuxuryLine",
+      "가격": 55.0,
+      "별점": 4.7,
+      "리뷰수": 7890,
+      "asin": "B0CDEF1240",
+      "링크": "https://amazon.com/dp/B0CDEF1240"
+    },
+    {
+      "제품명": "Everyday Perfume Daily Use Set",
+      "브랜드": "DailyBrand",
+      "가격": 19.99,
+      "별점": 4.3,
+      "리뷰수": 56789,
+      "asin": "B0CDEF1241",
+      "링크": "https://amazon.com/dp/B0CDEF1241"
+    },
+    {
+      "제품명": "Advanced Perfume Formula Plus",
+      "브랜드": "AdvancedCo",
+      "가격": 32.0,
+      "별점": 4.4,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1242",
+      "링크": "https://amazon.com/dp/B0CDEF1242"
+    },
+    {
+      "제품명": "Classic Perfume Traditional Set",
+      "브랜드": "ClassicBrand",
+      "가격": 22.5,
+      "별점": 4.2,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1243",
+      "링크": "https://amazon.com/dp/B0CDEF1243"
+    },
+    {
+      "제품명": "Modern Perfume Innovation Series",
+      "브랜드": "ModernCo",
+      "가격": 42.0,
+      "별점": 4.5,
+      "리뷰수": 34567,
+      "asin": "B0CDEF1244",
+      "링크": "https://amazon.com/dp/B0CDEF1244"
+    },
+    {
+      "제품명": "Eco-Friendly Perfume Green Edition",
+      "브랜드": "EcoBrand",
+      "가격": 28.99,
+      "별점": 4.4,
+      "리뷰수": 8901,
+      "asin": "B0CDEF1245",
+      "링크": "https://amazon.com/dp/B0CDEF1245"
+    },
+    {
+      "제품명": "Travel Size Perfume Mini Set",
+      "브랜드": "TravelCo",
+      "가격": 14.99,
+      "별점": 4.1,
+      "리뷰수": 45678,
+      "asin": "B0CDEF1246",
+      "링크": "https://amazon.com/dp/B0CDEF1246"
+    },
+    {
+      "제품명": "Family Perfume Mega Pack",
+      "브랜드": "FamilyBrand",
+      "가격": 48.0,
+      "별점": 4.3,
+      "리뷰수": 23456,
+      "asin": "B0CDEF1247",
+      "링크": "https://amazon.com/dp/B0CDEF1247"
+    },
+    {
+      "제품명": "Sensitive Perfume Gentle Care",
+      "브랜드": "GentleCo",
+      "가격": 26.5,
+      "별점": 4.5,
+      "리뷰수": 12345,
+      "asin": "B0CDEF1248",
+      "링크": "https://amazon.com/dp/B0CDEF1248"
+    }
+  ],
+  "amazon.com_shampoo": [
+    {
+      "제품명": "Pantene Pro-V Daily Moisture Renewal Shampoo",
+      "브랜드": "Pantene",
+      "가격": 12.99,
+      "별점": 4.5,
+      "리뷰수": 45678,
+      "asin": "B0CSHP1234",
+      "링크": "https://amazon.com/dp/B0CSHP1234"
+    },
+    {
+      "제품명": "Head & Shoulders Clinical Strength Shampoo",
+      "브랜드": "Head & Shoulders",
+      "가격": 15.99,
+      "별점": 4.4,
+      "리뷰수": 67890,
+      "asin": "B0CSHP1235",
+      "링크": "https://amazon.com/dp/B0CSHP1235"
+    },
+    {
+      "제품명": "OGX Biotin & Collagen Shampoo Set",
+      "브랜드": "OGX",
+      "가격": 18.99,
+      "별점": 4.3,
+      "리뷰수": 34521,
+      "asin": "B0CSHP1236",
+      "링크": "https://amazon.com/dp/B0CSHP1236"
+    },
+    {
+      "제품명": "Dove Nutritive Solutions Shampoo Bundle",
+      "브랜드": "Dove",
+      "가격": 14.5,
+      "별점": 4.2,
+      "리뷰수": 89012,
+      "asin": "B0CSHP1237",
+      "링크": "https://amazon.com/dp/B0CSHP1237"
+    },
+    {
+      "제품명": "TRESemmé Keratin Smooth Shampoo Pack",
+      "브랜드": "TRESemmé",
+      "가격": 16.99,
+      "별점": 4.1,
+      "리뷰수": 23456,
+      "asin": "B0CSHP1238",
+      "링크": "https://amazon.com/dp/B0CSHP1238"
+    },
+    {
+      "제품명": "Moroccanoil Hydrating Shampoo",
+      "브랜드": "Moroccanoil",
+      "가격": 28.0,
+      "별점": 4.6,
+      "리뷰수": 56789,
+      "asin": "B0CSHP1239",
+      "링크": "https://amazon.com/dp/B0CSHP1239"
+    },
+    {
+      "제품명": "Olaplex No.4 Bond Maintenance Shampoo",
+      "브랜드": "Olaplex",
+      "가격": 30.0,
+      "별점": 4.7,
+      "리뷰수": 78901,
+      "asin": "B0CSHP1240",
+      "링크": "https://amazon.com/dp/B0CSHP1240"
+    },
+    {
+      "제품명": "Aussie Miracle Moist Shampoo 3-Pack",
+      "브랜드": "Aussie",
+      "가격": 19.99,
+      "별점": 4.3,
+      "리뷰수": 34567,
+      "asin": "B0CSHP1241",
+      "링크": "https://amazon.com/dp/B0CSHP1241"
+    },
+    {
+      "제품명": "Herbal Essences Bio:Renew Shampoo Set",
+      "브랜드": "Herbal Essences",
+      "가격": 17.5,
+      "별점": 4.2,
+      "리뷰수": 45678,
+      "asin": "B0CSHP1242",
+      "링크": "https://amazon.com/dp/B0CSHP1242"
+    },
+    {
+      "제품명": "Redken All Soft Shampoo for Dry Hair",
+      "브랜드": "Redken",
+      "가격": 25.0,
+      "별점": 4.5,
+      "리뷰수": 23456,
+      "asin": "B0CSHP1243",
+      "링크": "https://amazon.com/dp/B0CSHP1243"
+    },
+    {
+      "제품명": "Briogeo Don't Despair Repair Shampoo",
+      "브랜드": "Briogeo",
+      "가격": 36.0,
+      "별점": 4.6,
+      "리뷰수": 12345,
+      "asin": "B0CSHP1244",
+      "링크": "https://amazon.com/dp/B0CSHP1244"
+    },
+    {
+      "제품명": "Living Proof Full Shampoo",
+      "브랜드": "Living Proof",
+      "가격": 32.0,
+      "별점": 4.4,
+      "리뷰수": 34567,
+      "asin": "B0CSHP1245",
+      "링크": "https://amazon.com/dp/B0CSHP1245"
+    },
+    {
+      "제품명": "Pureology Hydrate Shampoo",
+      "브랜드": "Pureology",
+      "가격": 38.0,
+      "별점": 4.5,
+      "리뷰수": 45678,
+      "asin": "B0CSHP1246",
+      "링크": "https://amazon.com/dp/B0CSHP1246"
+    },
+    {
+      "제품명": "Function of Beauty Custom Shampoo",
+      "브랜드": "Function of Beauty",
+      "가격": 29.99,
+      "별점": 4.3,
+      "리뷰수": 56789,
+      "asin": "B0CSHP1247",
+      "링크": "https://amazon.com/dp/B0CSHP1247"
+    },
+    {
+      "제품명": "Kérastase Nutritive Shampoo",
+      "브랜드": "Kérastase",
+      "가격": 42.0,
+      "별점": 4.7,
+      "리뷰수": 23456,
+      "asin": "B0CSHP1248",
+      "링크": "https://amazon.com/dp/B0CSHP1248"
+    }
+  ]
+}
