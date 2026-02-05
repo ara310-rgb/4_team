@@ -48,7 +48,8 @@ PAGES = {
 }
 page = st.session_state["current_page"]
 if page != "dashboard.py":
-    runpy.run_path(str(PAGES[page]), run_name="__main__")
+    if page in PAGES and PAGES[page].exists():
+        runpy.run_path(str(PAGES[page]), run_name="__main__")
     st.stop()
 
 st.set_page_config(
@@ -291,34 +292,41 @@ HEADERS = {
 
 @st.cache_data(ttl=60)
 def fetch_headlines(url: str, limit: int = 5):
-    r = requests.get(url, headers=HEADERS, timeout=10)
-    r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=10)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
 
-    items = []
-    for li in soup.select("li.sa_item"):
-        title_node = li.select_one("a.sa_text_title strong.sa_text_strong")
-        link_node = li.select_one("a.sa_text_title")
-        thumb_img = li.select_one("a.sa_thumb_link img")
+        items = []
+        for li in soup.select("li.sa_item"):
+            title_node = li.select_one("a.sa_text_title strong.sa_text_strong")
+            link_node = li.select_one("a.sa_text_title")
+            thumb_img = li.select_one("a.sa_thumb_link img")
 
-        if not title_node or not link_node:
-            continue
+            if not title_node or not link_node:
+                continue
 
-        title = title_node.get_text(strip=True)
+            title = title_node.get_text(strip=True)
 
-        href = (link_node.get("href") or "").strip()
-        if href.startswith("/"):
-            href = "https://news.naver.com" + href
+            href = (link_node.get("href") or "").strip()
+            if href.startswith("/"):
+                href = "https://news.naver.com" + href
 
-        img_url = ""
-        if thumb_img:
-            img_url = (thumb_img.get("src") or thumb_img.get("data-src") or "").strip()
+            img_url = ""
+            if thumb_img:
+                img_url = (thumb_img.get("src") or thumb_img.get("data-src") or "").strip()
 
-        items.append({"title": title, "url": href, "img": img_url})
-        if len(items) >= limit:
-            break
+            items.append({"title": title, "url": href, "img": img_url})
+            if len(items) >= limit:
+                break
 
-    return items
+        return items
+    except requests.exceptions.HTTPError as e:
+        # HTTP 에러 발생 시 빈 리스트 반환
+        return []
+    except Exception as e:
+        # 기타 모든 에러 처리
+        return []
 
 
 def esc(s: str) -> str:
@@ -332,6 +340,9 @@ def esc(s: str) -> str:
 
 
 def render_naver_ticker(items):
+    if not items or len(items) == 0:
+        return
+        
     cards = []
     for it in items:
         img = it.get("img") or ""
@@ -1080,11 +1091,14 @@ if selected == "Settings":
 
 st.markdown("<br>", unsafe_allow_html=True)
 
+# 뉴스 티커 부분 - 에러 처리 추가
 with st.container():
     items = fetch_headlines(NAVER_URL, 5)
-    if not items:
-        items = [{"title": "헤드라인을 불러오지 못했습니다.", "url": NAVER_URL, "img": ""}]
-    render_naver_ticker(items)
+    if items and len(items) > 0:
+        render_naver_ticker(items)
+    else:
+        # 뉴스를 불러오지 못한 경우 대체 콘텐츠
+        st.info("📰 **실시간 무역 뉴스**: [네이버 경제뉴스 바로가기](https://news.naver.com/breakingnews/section/101/262)")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
