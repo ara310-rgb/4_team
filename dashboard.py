@@ -69,7 +69,10 @@ st.markdown(
 }
 
 .block-container{
-  padding: 2rem 8rem 5rem !important;
+  padding-top: 8rem !important;  /* 이렇게 변경 */
+  padding-left: 8rem !important;
+  padding-right: 8rem !important;
+  padding-bottom: 5rem !important;
 }
 
 :root{
