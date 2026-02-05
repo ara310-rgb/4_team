@@ -274,6 +274,15 @@ div[data-testid="stVerticalBlockBorderWrapper"]{
   word-break: keep-all;
 }
 
+/* 헤더 영역 정렬 수정 */
+.header-right-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  gap: 0.5rem;
+}
+
 </style>
 """,
     unsafe_allow_html=True,
@@ -530,7 +539,6 @@ def get_openai_response(user_text: str, system_message: str) -> str:
     except Exception as e:
         return f"AI 호출 오류: {e}"
 
-st.space("small")
 def render_chat_widget(
     get_openai_response_fn,
     title: str = "💬 AI 챗봇",
@@ -958,7 +966,8 @@ with header_left:
     )
 
 with header_right:
-    b1, b2 = st.columns(2)
+    st.markdown('<div style="height: 20px;"></div>', unsafe_allow_html=True)
+    b1, b2 = st.columns([1, 1], gap="small")
     with b1:
         render_exchange_widget(
             title="**💵 환율**",
@@ -1123,7 +1132,7 @@ with c3:
     st.metric("진행률", f"{int(progress3*100)}%")
 
 with c4:
-    st.space("medium")
+    st.markdown('<div style="height: 8px;"></div>', unsafe_allow_html=True)
     st.markdown(
         """
         <div class="quick-stack">
